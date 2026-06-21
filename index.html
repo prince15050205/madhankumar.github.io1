@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Madhan Kumar Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e5e7eb;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      color: #facc15;
+      margin: 0;
+      font-size: 42px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+
+    nav a:hover {
+      background: #facc15;
+      color: #111827;
+    }
+
+    section {
+      max-width: 950px;
+      margin: 30px auto;
+      padding: 25px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #facc15;
+    }
+
+    /* CARD STYLE */
+    .card {
+      background: rgba(255,255,255,0.08);
+      padding: 15px;
+      margin-top: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      background: rgba(255,255,255,0.12);
+    }
+
+    .detail-box {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background: rgba(250,204,21,0.1);
+      border-left: 3px solid #facc15;
+      border-radius: 8px;
+    }
+
+    .active {
+      border-left: 5px solid #facc15 !important;
+      background: rgba(250,204,21,0.15) !important;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 5px;
+      background: rgba(250,204,21,0.15);
+      color: #facc15;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Madhan Kumar V</h1>
+  <p>B.E Computer Science and Engineering | Web Developer | AI Enthusiast | Data Analyst</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am Madhan Kumar, a passionate final year Computer Science and Engineering student.
+    I specialize in building web applications, exploring AI concepts, and working on real-world projects.
+  </p>
+
+  <p>
+    My focus is on improving my skills in software development, data analytics, and problem solving.
+    I aim to become a strong software engineer in a reputed company.
+  </p>
+
+  <div>
+    <span class="tag">Quick Learner</span>
+    <span class="tag">Problem Solver</span>
+    <span class="tag">Team Player</span>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+
+  <div class="card">
+    <h3>B.E Computer Science and Engineering</h3>
+    <div class="detail-box" style="display:block;">
+      Studying core subjects like Data Structures, DBMS, Operating Systems, Computer Networks,
+      Software Engineering, and AI fundamentals.<br><br>
+      Currently in Final Year, focusing on real-time projects and placement preparation.
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="card" onclick="toggle(this,'java')">
+    Java
+    <div id="java" class="detail-box">
+      OOP, DSA basics, backend logic building.
+    </div>
+  </div>
+
+  <div class="card" onclick="toggle(this,'python')">
+    Python
+    <div id="python" class="detail-box">
+      AI/ML, automation, data processing, fraud detection projects.
+    </div>
+  </div>
+
+  <div class="card" onclick="toggle(this,'web')">
+    HTML, CSS, JavaScript
+    <div id="web" class="detail-box">
+      Responsive UI, frontend development, interactive websites.
+    </div>
+  </div>
+
+  <div class="card" onclick="toggle(this,'data')">
+    Data Analyst ⭐
+    <div id="data" class="detail-box">
+      Data cleaning, visualization, insights using Pandas, NumPy, Matplotlib.
+    </div>
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects (Click for details)</h2>
+
+  <div class="card" onclick="toggle(this,'p1')">
+    Credit Card Fraud Detection System
+    <div id="p1" class="detail-box">
+      Machine Learning project using Python.<br>
+      Detects fraudulent transactions using pattern analysis and classification models.<br>
+      Focus: Accuracy improvement and anomaly detection.
+    </div>
+  </div>
+
+  <div class="card" onclick="toggle(this,'p2')">
+    Excuse Management System
+    <div id="p2" class="detail-box">
+      Web application to manage student/employee excuse requests.<br>
+      Features: submission, approval workflow, and tracking system.<br>
+      Built using HTML, CSS, JavaScript.
+    </div>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📧 Email: madhankumarm824@gmail.com</p>
+  <p>📞 Phone: 6379723302</p>
+</section>
+
+<footer>
+  © 2026 Madhan Kumar | Premium Portfolio 🚀
+</footer>
+
+<script>
+  function toggle(el, id) {
+
+    let box = document.getElementById(id);
+    box.style.display = (box.style.display === "block") ? "none" : "block";
+
+    let cards = document.getElementsByClassName("card");
+    for (let c of cards) {
+      c.classList.remove("active");
+    }
+
+    el.classList.add("active");
+  }
+</script>
+
+</body>
+</html>
